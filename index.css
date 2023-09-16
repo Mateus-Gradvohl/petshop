@@ -1,6 +1,17 @@
-body{
+* {
     margin: 0;
     padding: 0;
+}
+
+.container a{
+    color: white;
+    text-decoration: none;
+}
+
+.container a:hover{
+    color: #30d300;
+    transition: 0.75s;
+   
 }
 
 .container-fluid{
@@ -32,7 +43,7 @@ body{
 }
 .container ul li{
     font-family: arial;
-    font-size: 20px;
+    font-size: 25px;
     color: #fff;
     list-style: none;
     margin-right: 50px;
@@ -41,7 +52,7 @@ body{
     transition: 0.75s;
 }
 .container ul li:first-child{
-    color: #de2767f2;
+    color: #30d300;
 }
 .container ul li:hover{
     color: #30d300;
@@ -66,7 +77,7 @@ body{
 
 .content {
     width: 1200px;
-    height: 100vh;
+    height: 45vh;
     margin: auto;
     padding-left: 57%;
 }
