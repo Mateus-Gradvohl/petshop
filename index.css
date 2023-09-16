@@ -32,6 +32,7 @@ body{
 }
 .container ul li{
     font-family: arial;
+    font-size: 20px;
     color: #fff;
     list-style: none;
     margin-right: 50px;
