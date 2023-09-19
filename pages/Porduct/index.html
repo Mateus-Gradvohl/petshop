@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <script type="text/javascript" type="text/javascript">
+      Parse.initialize("CjQzldIQHnDVpPsG13aH1hsBUKHCkACMT14DO6iV","AttHQ7EleLv8ddEkXs2joLC8H4tWJ09o28VtKOgm");
+      Parse.serverURL = 'https://parseapi.back4app.com/'
+    </script>
+    <link rel="stylesheet" href="Products.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de produto</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <span>Cadastro de produtos</span>
+        </div>
+        
+        <button id="btnVoltar" onclick="window.location.href='../index.html'">Voltar</button>
+        <button onclick="openModal()" id="new">Incluir</i></button>
+        
+        <div class="divTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descrição</th>
+                        <th>Embalagem</th>
+                        <th>Preço de venda</th>
+                        <th class="acao">Editar</th>
+                        <th class="acao">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+              </tbody>
+            </table>
+        </div>
+
+          <div class="modal-container">
+            <div class="modal">
+              <form>
+
+                <h2>Produto</h2>
+                <div class="container-produto">
+                    <label for="m-descricao">Descrição</label>
+                    <input id="m-descricao" type="text" required />
+            
+                    <label for="m-embalagem">Embalagem</label>
+                    <input id="m-embalagem" type="text" required />
+            
+                    <label for="m-codigo-fornecedor">Código do fabricante</label>
+                    <input id="m-codigo-fornecedor" type="text" required />
+                </div>
+
+                <h2>Precificação</h2>
+
+                <div class="container-precificacao">
+                    <label for="m-custo">Custo</label>
+                    <input id="m-custo" type="text">
+    
+                    <label for="m-preco-venda">Preço de venda</label>
+                    <input id="m-preco-venda" type="text">
+                </div>
+
+                <button id="btnSalvar">Salvar</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+        <script src="Products.js"></script>
+        <script src="App.js"></script>
+</body>
+
+
+
