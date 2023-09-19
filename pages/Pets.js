@@ -98,4 +98,4 @@ btnSalvar.onclick = e => {
     modal.classList.remove('active')
     loadItens()
     id = undefined
-  }
+}
