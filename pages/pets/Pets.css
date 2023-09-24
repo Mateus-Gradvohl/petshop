@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to left, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(../../bg.jpeg);
+  background: linear-gradient(to left, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(../../src/img/bg.jpeg);
   background-size: cover;
 }
 
@@ -23,69 +22,68 @@ button {
 }
 
 .container {
-  background: #fefefe;
-  border-radius: 10px;
-  height: 80%;
   width: 90%;
+  height: 80%;
+  border-radius: 10px;
+  background: white;
 }
 
 .header {
-  align-items: center;
+  min-height: 70px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin: auto 12px;
-  min-height: 70px;
 }
 
 .header span {
-  font-weight: bold;
-  font-size: 2rem;
+  font-weight: 900;
+  font-size: 20px;
   word-break: break-all;
 }
 
 #btnVoltar {
-  background-color: rgb(57, 57, 226);
-  border: none;
-  border-radius: 5px;
-  color: #fefefe;
-  font-size: 16px;
   margin: 10px;
+  font-size: 16px;
   padding: 8px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: rgb(57, 57, 226);
 }
 
 
 #new {
-  background-color: rgb(9, 215, 57);
-  border: none;
-  border-radius: 5px;
-  color: #fefefe;
   font-size: 16px;
-  margin: 10px;
   padding: 8px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: rgb(9, 215, 57);
 }
 
 .divTable {
-  height: inherit; 
-  overflow: auto;
   padding: 10px;
   width: auto; 
+  height:inherit; 
+  overflow:auto;
 }
 
 .divTable::-webkit-scrollbar {
-  background-color: whitesmoke; 
   width: 12px;
+  background-color: whitesmoke; 
 }
 
 .divTable::-webkit-scrollbar-thumb {
-  background-color: darkgray; 
   border-radius: 10px;
+  background-color: darkgray; 
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 10px;
   width: 100%;
+  border-spacing: 10px;
   word-break: break-all;
+  border-collapse: collapse;
 }
 
 thead {
@@ -97,9 +95,9 @@ tr {
 }
 
 tbody tr td {
-  max-width: 50px;
-  padding: 6px;
   vertical-align: text-top;
+  padding: 6px;
+  max-width: 50px;
 }
 
 thead tr th {
@@ -113,12 +111,47 @@ tbody tr {
 }
 
 thead tr th.acao {
-  text-align: center;
   width: 100px!important;
+  text-align: center;
 }
 
 tbody tr td.acao {
   text-align: center;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 10px;
+  }
+  
+  .header span {
+    font-size: 15px;
+  }
+
+  #new {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  thead tr th.acao {
+    width: auto!important;
+  }
+  
+  td button i {
+    font-size: 20px!important;
+  }
+
+  td button i:first-child {
+    margin-right: 0;
+  }
+
+  .modal {
+    width: 90%!important;
+  }
+
+  .modal label {
+    font-size: 12px!important;
+  }
 }
 
 .modal-container {
@@ -161,20 +194,15 @@ tbody tr td.acao {
 }
 
 .modal button {
-  background-color: rgb(57, 57, 226);
-  border: none;
-  border-radius: 20px; 
-  color: #fefefe;
-  margin: 1rem auto;
+  width: 100%;
+  margin: 10px auto;
   outline: none;
+  border-radius: 20px; 
   padding: 5px 10px; 
   width: 100%;
-}
-
-.container-produto, .container-precificacao {
-  border-radius: 10px;
-  box-shadow: inset 0px 0px 10px 0px #b7b7b7;
-  padding: 1rem;
+  border: none;
+  background-color: rgb(57, 57, 226);
+  color: white;
 }
 
 .active {
@@ -183,6 +211,17 @@ tbody tr td.acao {
 
 .active .modal {
   animation: modal .4s;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 td button {
@@ -197,50 +236,4 @@ td button i {
 
 td button i:first-child {
   margin-right: 10px;
-}
-
-@media (max-width: 700px) {
-  body {
-    font-size: 10px;
-  }
-  
-  .header span {
-    font-size: 15px;
-  }
-
-  #new {
-    padding: 5px;
-    font-size: 10px;
-  }
-
-  thead tr th.acao {
-    width: auto!important;
-  }
-  
-  td button i {
-    font-size: 20px!important;
-  }
-
-  td button i:first-child {
-    margin-right: 0;
-  }
-
-  .modal {
-    width: 90%!important;
-  }
-
-  .modal label {
-    font-size: 1rem!important;  
-  }
-}
-
-@keyframes modal {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -60px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
 }

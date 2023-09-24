@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
     <link rel="stylesheet" href="Pets.css"/>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <meta charset="utf-8">
@@ -15,7 +16,7 @@
             <span>Lista de Pets para Adoção</span>
             <button onclick="openModal()" id="new">Incluir</i></button>
         </div>
-        <button id="btnVoltar" onclick="window.location.href='../index.html'">Voltar</button>
+        <button id="btnVoltar" onclick="window.location.href='../../index.html'">Voltar</button>
         <div class="divTable">
             <table>
               <thead>
@@ -42,7 +43,7 @@
                 <input id="m-raca" type="text" required />
         
                 <label for="m-idade">Idade</label>
-                <input id="m-idade" type="number" required />
+                <input id="m-idade" type="text" required />
                 <button id="btnSalvar">Salvar</button>
               </form>
             </div>

@@ -3,11 +3,7 @@
 
 <head>
     <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
-    <script type="text/javascript" type="text/javascript">
-      Parse.initialize("CjQzldIQHnDVpPsG13aH1hsBUKHCkACMT14DO6iV","AttHQ7EleLv8ddEkXs2joLC8H4tWJ09o28VtKOgm");
-      Parse.serverURL = 'https://parseapi.back4app.com/'
-    </script>
-    <link rel="stylesheet" href="Products.css"/>
+    <link rel="stylesheet" href="Product.css"/>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,14 +17,13 @@
             <span>Cadastro de produtos</span>
         </div>
         
-        <button id="btnVoltar" onclick="window.location.href='../index.html'">Voltar</button>
+        <button id="btnVoltar" onclick="window.location.href='../../index.html'">Voltar</button>
         <button onclick="openModal()" id="new">Incluir</i></button>
         
         <div class="divTable">
             <table>
                 <thead>
                     <tr>
-                        <th>Código</th>
                         <th>Descrição</th>
                         <th>Embalagem</th>
                         <th>Preço de venda</th>
@@ -37,7 +32,7 @@
                     </tr>
                 </thead>
                 <tbody>
-              </tbody>
+                </tbody>
             </table>
         </div>
 
@@ -48,13 +43,13 @@
                 <h2>Produto</h2>
                 <div class="container-produto">
                     <label for="m-descricao">Descrição</label>
-                    <input id="m-descricao" type="text" required />
+                    <input id="m-descricao" type="text" required/>
             
                     <label for="m-embalagem">Embalagem</label>
-                    <input id="m-embalagem" type="text" required />
+                    <input id="m-embalagem" type="text" required/>
             
                     <label for="m-codigo-fornecedor">Código do fabricante</label>
-                    <input id="m-codigo-fornecedor" type="text" required />
+                    <input id="m-codigo-fornecedor" type="text" required/>
                 </div>
 
                 <h2>Precificação</h2>
@@ -73,8 +68,7 @@
           </div>
 
         </div>
-        <script src="Products.js"></script>
-        <script src="App.js"></script>
+        <script src="Product.js"></script>
 </body>
 
 

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to left, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(../bg.jpeg);
+  background: linear-gradient(to left, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(../../src/img/bg.jpeg);
   background-size: cover;
 }
 
@@ -22,68 +23,69 @@ button {
 }
 
 .container {
-  width: 90%;
-  height: 80%;
+  background: #fefefe;
   border-radius: 10px;
-  background: white;
+  height: 80%;
+  width: 90%;
 }
 
 .header {
-  min-height: 70px;
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-between;
   margin: auto 12px;
+  min-height: 70px;
 }
 
 .header span {
-  font-weight: 900;
-  font-size: 20px;
+  font-weight: bold;
+  font-size: 2rem;
   word-break: break-all;
 }
 
 #btnVoltar {
-  margin: 10px;
-  font-size: 16px;
-  padding: 8px;
-  border-radius: 5px;
-  border: none;
-  color: white;
   background-color: rgb(57, 57, 226);
+  border: none;
+  border-radius: 5px;
+  color: #fefefe;
+  font-size: 16px;
+  margin: 10px;
+  padding: 8px;
 }
 
 
 #new {
-  font-size: 16px;
-  padding: 8px;
-  border-radius: 5px;
-  border: none;
-  color: white;
   background-color: rgb(9, 215, 57);
+  border: none;
+  border-radius: 5px;
+  color: #fefefe;
+  font-size: 16px;
+  margin: 10px;
+  padding: 8px;
 }
 
 .divTable {
+  height: inherit; 
+  overflow: auto;
   padding: 10px;
   width: auto; 
-  height:inherit; 
-  overflow:auto;
 }
 
 .divTable::-webkit-scrollbar {
-  width: 12px;
   background-color: whitesmoke; 
+  width: 12px;
 }
 
 .divTable::-webkit-scrollbar-thumb {
-  border-radius: 10px;
   background-color: darkgray; 
+  border-radius: 10px;
 }
 
 table {
-  width: 100%;
-  border-spacing: 10px;
-  word-break: break-all;
   border-collapse: collapse;
+  border-spacing: 10px;
+  width: 100%;
+  word-break: break-all;
 }
 
 thead {
@@ -95,9 +97,9 @@ tr {
 }
 
 tbody tr td {
-  vertical-align: text-top;
-  padding: 6px;
   max-width: 50px;
+  padding: 6px;
+  vertical-align: text-top;
 }
 
 thead tr th {
@@ -111,47 +113,12 @@ tbody tr {
 }
 
 thead tr th.acao {
-  width: 100px!important;
   text-align: center;
+  width: 100px!important;
 }
 
 tbody tr td.acao {
   text-align: center;
-}
-
-@media (max-width: 700px) {
-  body {
-    font-size: 10px;
-  }
-  
-  .header span {
-    font-size: 15px;
-  }
-
-  #new {
-    padding: 5px;
-    font-size: 10px;
-  }
-
-  thead tr th.acao {
-    width: auto!important;
-  }
-  
-  td button i {
-    font-size: 20px!important;
-  }
-
-  td button i:first-child {
-    margin-right: 0;
-  }
-
-  .modal {
-    width: 90%!important;
-  }
-
-  .modal label {
-    font-size: 12px!important;
-  }
 }
 
 .modal-container {
@@ -194,15 +161,20 @@ tbody tr td.acao {
 }
 
 .modal button {
-  width: 100%;
-  margin: 10px auto;
-  outline: none;
+  background-color: rgb(57, 57, 226);
+  border: none;
   border-radius: 20px; 
+  color: #fefefe;
+  margin: 1rem auto;
+  outline: none;
   padding: 5px 10px; 
   width: 100%;
-  border: none;
-  background-color: rgb(57, 57, 226);
-  color: white;
+}
+
+.container-produto, .container-precificacao {
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px 0px #b7b7b7;
+  padding: 1rem;
 }
 
 .active {
@@ -211,17 +183,6 @@ tbody tr td.acao {
 
 .active .modal {
   animation: modal .4s;
-}
-
-@keyframes modal {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -60px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
 }
 
 td button {
@@ -236,4 +197,50 @@ td button i {
 
 td button i:first-child {
   margin-right: 10px;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 10px;
+  }
+  
+  .header span {
+    font-size: 15px;
+  }
+
+  #new {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  thead tr th.acao {
+    width: auto!important;
+  }
+  
+  td button i {
+    font-size: 20px!important;
+  }
+
+  td button i:first-child {
+    margin-right: 0;
+  }
+
+  .modal {
+    width: 90%!important;
+  }
+
+  .modal label {
+    font-size: 1rem!important;  
+  }
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
