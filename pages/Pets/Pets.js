@@ -51,13 +51,18 @@ async function listarItens() {
     
   tbody.innerHTML=''
   itens = await parseQuery.find()
-  try{
-    itens.forEach((item, index) => {
-      insertItem(item, index)
-      });
-  }catch{
-       alert("Não há dados cadastrados ainda");
-     }
+  if (await parseQuery.count() === 0){
+    alert("Não há dados cadastrados ainda");
+  } 
+  else {
+    try{
+      itens.forEach((item, index) => {
+        insertItem(item, index)
+        });
+    }catch (error) {
+      alert(`Error: ${error.message}`);
+    }
+  } 
      limparCamposModal();
 }
 
