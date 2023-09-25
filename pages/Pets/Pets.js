@@ -41,7 +41,7 @@ async function criarPet() {
         } catch (error) {
           alert(`Error: ${error.message}`);
         }
-    listarItens();
+    location.reload()
     limparCamposModal();
 }
 
