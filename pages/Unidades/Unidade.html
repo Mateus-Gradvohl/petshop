@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <link rel="stylesheet" href="Unidade.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Atendimento</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <span>Lista de Unidades</span>
+            <button onclick="abrirModal()" id="new">Adicionar</i></button>
+        </div>
+        <button id="btnVoltar" onclick="window.location.href='../../index.html'">Voltar</button>
+        <div class="divTable">
+            <table>
+              <thead>
+                <tr>
+                  <th>Endereço</th>
+                  <th>Numero</th>
+                  <th>Bairro</th>
+                  <th>Contato</th>
+                  <th class="acao">Editar</th>
+                  <th class="acao">Excluir</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="modal-container">
+            <div class="modal">
+              <form>
+                <label for="m-endereco">Endereço</label>
+                <input id="m-endereco" type="text" required />
+        
+                <label for="m-numero">Numero</label>
+                <input id="m-numero" type="number" required />
+        
+                <label for="m-bairro">Bairro</label>
+                <input id="m-bairro" type="text" required />
+
+                <label for="m-fone">Contato</label>
+                <input id="m-fone" type="text" required />
+
+                <button id="btnSalvar">Salvar</button>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+        <script src="Unidade.js"></script>
+</body>
+
+
+
